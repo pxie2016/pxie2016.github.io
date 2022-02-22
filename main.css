@@ -2,18 +2,28 @@
 
 .overall-container {
     display: grid;
-    grid-template-columns: [home-start] 1fr [home-end projects-start] 1fr [projects-end contact-info-start]
-    1fr [contact-info-end skiing-start] 1fr [skiing-end];
-    place-items: center;
-    grid-template-rows: [header-start] 75px [header-end] 50px [navbar-start] 25px [navbar-end education1-start]
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: [header-start] 75px [header-end navbar-start] 50px [navbar-end] 25px [education1-start]
     50px [education1-end education2-start] 50px [education2-end education3-start] 50px [education3-end];
     grid-template-areas:
     "header header header header"
-    "home projects contact-info skiing"
+    "navbar navbar navbar navbar"
     ". . . ."
     "education1 education1 education1 education1"
     "education2 education2 education2 education2"
-    "education3 education3 education3 education3";
+    "education3 education3 education3 education3"
+}
+
+.navbar {
+    display: flex;
+    top: 75px;
+    position: sticky;
+    width: 100%;
+    grid-area: navbar;
+    justify-content: space-around;
+    font: italic 22px Arial, sans-serif;
 }
 
 a {
@@ -30,26 +40,6 @@ a {
     font: 35px Arial, sans-serif;
 }
 
-.home {
-    grid-area: home;
-}
-
-.projects {
-    grid-area: projects;
-}
-
-.contact-info {
-    grid-area: contact-info;
-}
-
-.skiing {
-    grid-area: skiing;
-}
-
-.home, .projects, .contact-info, .skiing {
-    font: italic 22px Arial, sans-serif;
-}
-
 .education1 {
     grid-area: education1;
 }
@@ -63,5 +53,6 @@ a {
 }
 
 .education1, .education2, .education3 {
-    font: 18px Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
 }
