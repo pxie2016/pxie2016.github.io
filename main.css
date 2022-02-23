@@ -1,12 +1,21 @@
 @charset "utf-8";
 
+html {
+    background-color: #fdfdf0; /* off white/cream-ish color is easier on the eyes */
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+}
+
 .overall-container {
     display: grid;
     grid-template-columns: auto;
     align-items: center;
     justify-items: center;
     grid-template-rows: [header-start] 75px [header-end navbar-start] 50px [navbar-end] 25px [education1-start]
-    50px [education1-end education2-start] 50px [education2-end education3-start] 50px [education3-end];
+    75px [education1-end education2-start] 75px [education2-end education3-start] 75px [education3-end];
     grid-template-areas:
     "header header header header"
     "navbar navbar navbar navbar"
@@ -24,6 +33,10 @@
     grid-area: navbar;
     justify-content: space-around;
     font: italic 22px Arial, sans-serif;
+}
+
+.navbar a:hover {
+    color: darkgray;
 }
 
 a {

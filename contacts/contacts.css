@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import "../main.css";
+
+.overall-container {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    grid-template-rows: [header-start] 75px [header-end navbar-start] 50px [navbar-end] 25px [email-start]
+    75px [email-end github-start] 75px [github-end linkedin-start] 75px [linkedin-end google-scholar-start] 75px [google-scholar-end];
+    grid-template-areas:
+    "header header header header"
+    "navbar navbar navbar navbar"
+    ". . . ."
+    "email email email email"
+    "github github github github"
+    "linkedin linkedin linkedin linkedin"
+    "google-scholar google-scholar google-scholar google-scholar";
+}
+
+.navbar {
+    display: flex;
+    top: 75px;
+    position: sticky;
+    width: 100%;
+    grid-area: navbar;
+    justify-content: space-around;
+    font: italic 22px Arial, sans-serif;
+}
+
+.email {
+    grid-area: email;
+}
+
+.github {
+    grid-area: github;
+}
+
+.linkedin {
+    grid-area: linkedin;
+}
+
+.google-scholar {
+    grid-area: google-scholar
+}
+
+.email, .github, .linkedin, .google-scholar {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.svg-icon {
+    display: inline-flex;
+    align-self: center;
+    top: 0.1375em;
+    position: relative;
+}
