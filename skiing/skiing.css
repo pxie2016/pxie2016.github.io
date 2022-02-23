@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import "../main.css";
+
+.overall-container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: [header-start] 75px [header-end navbar-start] 50px [navbar-end] 25px [gallery-start]
+    auto [gallery-end];
+    grid-template-areas:
+    "header"
+    "navbar"
+    "."
+    "ski-gallery-with-text";
+}
+
+img {
+    width: auto;
+    max-width: 50%;
+    height: auto;
+}
+
+p {
+    font: 18px Arial, sans-serif;
+}
+
+.ski-gallery-with-text {
+    padding-top: 25px;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    grid-area: ski-gallery-with-text;
+    align-items: center;
+}

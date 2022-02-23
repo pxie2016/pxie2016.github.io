@@ -17,12 +17,12 @@ body {
     grid-template-rows: [header-start] 75px [header-end navbar-start] 50px [navbar-end] 25px [education1-start]
     75px [education1-end education2-start] 75px [education2-end education3-start] 75px [education3-end];
     grid-template-areas:
-    "header header header header"
-    "navbar navbar navbar navbar"
-    ". . . ."
-    "education1 education1 education1 education1"
-    "education2 education2 education2 education2"
-    "education3 education3 education3 education3"
+    "header"
+    "navbar"
+    "."
+    "education1"
+    "education2"
+    "education3"
 }
 
 .navbar {
@@ -33,10 +33,19 @@ body {
     grid-area: navbar;
     justify-content: space-around;
     font: italic 22px Arial, sans-serif;
+    background-color: #fdfdf0;
 }
 
 .navbar a:hover {
     color: darkgray;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        row-gap: 1px;
+        background-color: transparent;
+    }
 }
 
 a {

@@ -5,16 +5,14 @@
     display: grid;
     grid-template-columns: auto;
     place-items: center;
-    grid-template-rows: [header-start] 75px [header-end navbar-start] 50px [navbar-end] 25px [email-start]
-    75px [email-end github-start] 75px [github-end linkedin-start] 75px [linkedin-end google-scholar-start] 75px [google-scholar-end];
+    grid-template-rows: [header-start] 75px [header-end navbar-start] 50px [navbar-end] 25px [email-and-github-start]
+    75px [email-and-github-end linkedin-and-google-scholar-start] 75px [linkedin-and-google-scholar-end];
     grid-template-areas:
-    "header header header header"
-    "navbar navbar navbar navbar"
-    ". . . ."
-    "email email email email"
-    "github github github github"
-    "linkedin linkedin linkedin linkedin"
-    "google-scholar google-scholar google-scholar google-scholar";
+    "header header"
+    "navbar navbar"
+    ". ."
+    "email github"
+    "linkedin google-scholar";
 }
 
 .navbar {

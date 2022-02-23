@@ -8,11 +8,11 @@
     grid-template-rows: [header-start] 75px [header-end navbar-start] 50px [navbar-end] 25px [project1-start]
     250px [project1-end project2-start] 250px [project2-end];
     grid-template-areas:
-    "header header header header"
-    "navbar navbar navbar navbar"
-    ". . . ."
-    "project1 project1 project1 project1"
-    "project2 project2 project2 project2";
+    "header"
+    "navbar"
+    "."
+    "project1"
+    "project2";
 }
 
 .navbar {
